@@ -1,0 +1,61 @@
+.select2{
+	width: 100%!important;
+}
+.has-error .select2-selection{
+	border: 1px solid #DD4B39;
+}
+.has-success .select2-selection{
+	border: 1px solid #00A65A;
+}
+.content-header h1{
+	font-family: cambria;
+}
+.box{
+  border-top: 3px solid #00A65A;
+}
+.box-title{
+	font-family: cambria;
+}
+.modal-title{
+	font-family: cambria;
+}
+.profile-username{
+  font-family: cambria;
+}
+.list-group-item a{
+  color: #333333;
+}
+.pagination>.active>a, 
+.pagination>.active>a:focus, 
+.pagination>.active>a:hover, 
+.pagination>.active>span, 
+.pagination>.active>span:focus, 
+.pagination>.active>span:hover {
+  z-index: 3;
+  color: #fff;
+  cursor: default;
+  background-color: #00A65A;
+  border-color: #00A65A;
+}
+
+select.input-sm:focus {
+    border-color: #00A65A;
+    box-shadow: none;
+}
+#table_filter .input-sm:focus {
+    border-color: #00A65A;
+    box-shadow: none;
+}
+.form-control:focus {
+    border-color: #00A65A;
+    box-shadow: none;
+}
+.foto_profile{
+  background: #ffffff;
+  color: #00A65A;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
