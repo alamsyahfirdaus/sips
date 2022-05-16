@@ -1,0 +1,14 @@
+1. Buat Database dengan nama apk_sips.
+2. Import Database yang terdapat pada folder assets > sql.
+
+Login Sebagai Administrator
+Email : admin@sips.com
+Password : admin@sips.com
+
+Login Sebagai Guru
+Email : guru@sips.com
+Password : guru@sips.com
+
+Login Sebagai Siswa
+Email : siswa@sips.com
+Password : siswa@sips.com
