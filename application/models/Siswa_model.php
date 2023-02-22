@@ -466,7 +466,7 @@ class Siswa_model extends CI_Model {
 		return $button;
 	}
 
-	public function rowPresensi($tanggal = NULL, $id_jadwal_pelajaran, $id_user, $semester = NULL, $id = NULL)
+	public function rowPresensi($tanggal = NULL, $id_jadwal_pelajaran = NULL, $id_user = NULL, $semester = NULL, $id = NULL)
 	{
 		# CEK PRESENSI HARI INI
 		
@@ -649,7 +649,7 @@ class Siswa_model extends CI_Model {
 		return $setData;
 	}
 
-	private function _getLapMapel($id_tahun_pelajaran, $id_jadwal_pelajaran = NULL, $id_user, $semester = NULL, $status)
+	private function _getLapMapel($id_tahun_pelajaran, $id_jadwal_pelajaran = NULL, $id_user = NULL, $semester = NULL, $status  = NULL)
 	{
 		$this->db->join('jadwal_pelajaran jp', 'jp.jadwal_pelajaran_id = p.id_jadwal_pelajaran', 'left');
 

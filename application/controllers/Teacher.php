@@ -182,7 +182,7 @@ class Teacher extends CI_Controller {
 		echo json_encode($output);
 	}
 
-	private function _checkDate($tanggal = NULL, $id_jadwal_pelajaran)
+	private function _checkDate($tanggal = NULL, $id_jadwal_pelajaran = NULL)
 	{
 		# Cek Kehadiran Berdasarkan Hari Mengajar (Hari Ini)
 		

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2022 at 01:50 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 7.4.24
+-- Generation Time: Feb 22, 2023 at 12:06 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,7 +34,7 @@ CREATE TABLE `guru_piket` (
   `id_user` int(11) DEFAULT NULL,
   `hari` int(11) DEFAULT NULL,
   `delete_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `guru_piket`
@@ -55,7 +55,19 @@ INSERT INTO `guru_piket` (`id_guru_piket`, `id_detail_guru_piket`, `id_tahun_pel
 (14, 3, NULL, 20, NULL, NULL),
 (15, 4, NULL, 26, NULL, NULL),
 (16, 5, NULL, 20, NULL, NULL),
-(17, 6, NULL, 21, NULL, NULL);
+(17, 6, NULL, 21, NULL, NULL),
+(24, NULL, 46, NULL, 1, NULL),
+(25, NULL, 46, NULL, 2, NULL),
+(26, NULL, 46, NULL, 3, NULL),
+(27, NULL, 46, NULL, 4, NULL),
+(28, NULL, 46, NULL, 5, NULL),
+(29, NULL, 46, NULL, 6, NULL),
+(30, 24, NULL, 26, NULL, NULL),
+(31, 25, NULL, 21, NULL, NULL),
+(32, 26, NULL, 20, NULL, NULL),
+(33, 27, NULL, 26, NULL, NULL),
+(34, 28, NULL, 21, NULL, NULL),
+(35, 29, NULL, 20, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -68,7 +80,7 @@ CREATE TABLE `image_slider` (
   `gambar` varchar(16) NOT NULL,
   `is_aktif` enum('Y','N') DEFAULT NULL,
   `sort` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `image_slider`
@@ -96,7 +108,7 @@ CREATE TABLE `jadwal_pelajaran` (
   `selesai` int(11) DEFAULT NULL,
   `sort` int(11) DEFAULT NULL,
   `delete_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `jadwal_pelajaran`
@@ -117,7 +129,12 @@ INSERT INTO `jadwal_pelajaran` (`jadwal_pelajaran_id`, `sub_id`, `id_tahun_pelaj
 (12, NULL, 20, 103, NULL, 22, NULL, NULL, NULL, NULL, NULL),
 (13, NULL, 20, 103, NULL, 23, NULL, NULL, NULL, NULL, NULL),
 (14, NULL, 20, 103, NULL, 24, NULL, NULL, NULL, NULL, NULL),
-(15, NULL, 20, 103, NULL, 30, NULL, NULL, NULL, NULL, NULL);
+(15, NULL, 20, 103, NULL, 30, NULL, NULL, NULL, NULL, NULL),
+(16, NULL, 46, 1, 22, 1, 5, 19, 57, 820, NULL),
+(17, NULL, 46, 1, 22, 22, 4, 1, 19, 700, NULL),
+(18, NULL, 46, 1, 22, 23, 3, 23, 57, 940, NULL),
+(19, NULL, 46, 1, 22, 24, 2, 19, 23, 820, NULL),
+(20, NULL, 46, 1, 22, 30, 1, 1, 19, 700, NULL);
 
 -- --------------------------------------------------------
 
@@ -129,7 +146,7 @@ CREATE TABLE `jam_pelajaran` (
   `jam_pelajaran_id` int(11) NOT NULL,
   `jam_pelajaran` varchar(16) NOT NULL,
   `delete_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `jam_pelajaran`
@@ -158,7 +175,7 @@ CREATE TABLE `kelas` (
   `urutan_kelas` int(11) DEFAULT NULL,
   `id_tingkat_kelas` int(11) NOT NULL,
   `delete_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `kelas`
@@ -182,7 +199,7 @@ CREATE TABLE `list_tables` (
   `id` int(11) NOT NULL,
   `table` varchar(32) NOT NULL,
   `title` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `list_tables`
@@ -209,7 +226,7 @@ CREATE TABLE `mata_pelajaran` (
   `kode_mapel` varchar(16) DEFAULT NULL,
   `nama_mapel` varchar(64) NOT NULL,
   `delete_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `mata_pelajaran`
@@ -234,7 +251,7 @@ CREATE TABLE `menu` (
   `icon` varchar(32) NOT NULL,
   `url_menu` varchar(32) DEFAULT NULL,
   `sort` varchar(32) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `menu`
@@ -260,7 +277,7 @@ CREATE TABLE `pengaturan` (
   `id_pengaturan` int(11) NOT NULL,
   `nama_pengaturan` varchar(32) DEFAULT NULL,
   `pengaturan` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pengaturan`
@@ -284,7 +301,7 @@ CREATE TABLE `pengumuman` (
   `gambar` varchar(16) DEFAULT NULL,
   `pengumuman` text DEFAULT NULL,
   `is_aktif` enum('Y','N') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pengumuman`
@@ -309,7 +326,7 @@ CREATE TABLE `presensi` (
   `status` int(11) DEFAULT NULL,
   `keterangan` text DEFAULT NULL,
   `delete_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `presensi`
@@ -525,7 +542,17 @@ INSERT INTO `presensi` (`presensi_id`, `tanggal`, `id_jadwal_pelajaran`, `id_use
 (250, '2022-01-27', NULL, 86, 20, 2, 1, NULL, NULL),
 (251, '2022-01-27', NULL, 87, 20, 2, 1, NULL, NULL),
 (252, '2022-01-27', NULL, 88, 20, 2, 1, NULL, NULL),
-(253, '2022-01-27', NULL, 89, 20, 2, 1, NULL, NULL);
+(253, '2022-01-27', NULL, 89, 20, 2, 1, NULL, NULL),
+(254, '2023-02-22', 18, 15, NULL, 2, 1, NULL, NULL),
+(255, '2023-02-22', 18, 23, NULL, 2, 1, NULL, NULL),
+(256, '2023-02-22', 18, 24, NULL, 2, 1, NULL, NULL),
+(257, '2023-02-22', 18, 33, NULL, 2, 1, NULL, NULL),
+(258, '2023-02-22', 18, 34, NULL, 2, 1, NULL, NULL),
+(259, '2023-02-22', 18, 35, NULL, 2, 1, NULL, NULL),
+(260, '2023-02-22', 18, 86, NULL, 2, 1, NULL, NULL),
+(261, '2023-02-22', 18, 87, NULL, 2, 1, NULL, NULL),
+(262, '2023-02-22', 18, 88, NULL, 2, 1, NULL, NULL),
+(263, '2023-02-22', 18, 89, NULL, 2, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -556,7 +583,7 @@ CREATE TABLE `siswa` (
   `penghasilan_wali` varchar(32) DEFAULT NULL,
   `nohp_wali` varchar(16) DEFAULT NULL,
   `alamat_wali` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `siswa`
@@ -607,7 +634,7 @@ CREATE TABLE `sub_menu` (
   `route` varchar(32) DEFAULT NULL,
   `sort` varchar(32) DEFAULT NULL,
   `menu_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `sub_menu`
@@ -645,15 +672,16 @@ CREATE TABLE `tahun_pelajaran` (
   `tanggal_mulai` date DEFAULT NULL,
   `tanggal_selesai` date DEFAULT NULL,
   `delete_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tahun_pelajaran`
 --
 
 INSERT INTO `tahun_pelajaran` (`tahun_pelajaran_id`, `tahun_pelajaran`, `semester`, `is_aktif`, `tanggal_mulai`, `tanggal_selesai`, `delete_at`) VALUES
-(20, '2021/2022', 2, 'Y', '2022-01-10', '2022-06-25', NULL),
-(45, '2022/2023', NULL, 'N', NULL, NULL, NULL);
+(20, '2021/2022', NULL, 'N', '2022-01-10', '2022-06-25', NULL),
+(45, '2022/2023', NULL, 'N', NULL, NULL, NULL),
+(46, '2023/2024', 2, 'Y', '2024-01-09', '2024-06-17', NULL);
 
 -- --------------------------------------------------------
 
@@ -666,7 +694,7 @@ CREATE TABLE `tanggal_semester` (
   `id_tahun_pelajaran` int(11) NOT NULL,
   `id_semester` int(11) NOT NULL,
   `tanggal_semester` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tanggal_semester`
@@ -674,7 +702,8 @@ CREATE TABLE `tanggal_semester` (
 
 INSERT INTO `tanggal_semester` (`id_tanggal_semester`, `id_tahun_pelajaran`, `id_semester`, `tanggal_semester`) VALUES
 (3, 20, 1, '2021-07-19/2022-01-01'),
-(5, 20, 2, '2022-01-10/2022-06-25');
+(5, 20, 2, '2022-01-10/2022-06-25'),
+(7, 46, 2, '2024-01-09/2024-06-17');
 
 -- --------------------------------------------------------
 
@@ -685,7 +714,7 @@ INSERT INTO `tanggal_semester` (`id_tanggal_semester`, `id_tahun_pelajaran`, `id
 CREATE TABLE `tingkat_kelas` (
   `tingkat_kelas_id` int(11) NOT NULL,
   `tingkat_kelas` varchar(16) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tingkat_kelas`
@@ -720,7 +749,7 @@ CREATE TABLE `user` (
   `status_guru` enum('GTY/PTY','Guru Bantu','Guru Honorer') DEFAULT NULL,
   `date_created` datetime NOT NULL,
   `delete_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user`
@@ -729,10 +758,10 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`user_id`, `no_induk`, `email`, `password`, `full_name`, `gender`, `tempat_lahir`, `tanggal_lahir`, `profile_pic`, `phone`, `agama`, `alamat`, `last_active`, `user_type_id`, `status_guru`, `date_created`, `delete_at`) VALUES
 (1, '3278053107980001', 'alamsyah.firdaus.af31@gmail.com', '85fcceafa13cbd523759a853ef5a89aeeeb78524', 'Alamsyah Firdaus', NULL, NULL, NULL, NULL, '089693839624', NULL, NULL, '2022-05-16 18:48:04', 1, NULL, '2021-05-31 11:25:19', NULL),
 (15, '9876543219', 'siswa@sips.com', '6488c3cbcb469108d7ccaa0d1f3a61c9e6735843', 'Siswa', 'L', 'Tasikmalaya', '2021-07-26', NULL, '', NULL, NULL, '2022-05-16 18:47:08', 3, NULL, '2021-03-18 14:01:33', NULL),
-(19, '1783207002', 'admin@sips.com', 'e4d18eacc1a0d260f2f94ebb5c4e6546d9a1e81b', 'Admin Sips', NULL, NULL, NULL, NULL, '081234567891', NULL, NULL, '2022-05-16 18:48:42', 1, NULL, '2021-04-10 15:30:17', NULL),
+(19, '1783207002', 'admin@sips.com', 'e4d18eacc1a0d260f2f94ebb5c4e6546d9a1e81b', 'Admin Sips', NULL, NULL, NULL, NULL, '081234567891', NULL, NULL, '2023-02-22 18:02:28', 1, NULL, '2021-04-10 15:30:17', NULL),
 (20, '1234567891', NULL, '92429d82a41e930486c6de5ebda9602d55c39986', 'Guru3', 'L', 'Tasikmalaya', '2021-07-26', NULL, '081234567892', 'Islam', NULL, '2021-12-03 20:31:15', 2, 'GTY/PTY', '2021-04-10 15:31:16', NULL),
 (21, '1234567892', NULL, '92429d82a41e930486c6de5ebda9602d55c39986', 'Guru2', 'L', 'Tasikmalaya', '2021-07-26', NULL, '081234567893', 'Islam', NULL, '2021-05-14 13:43:06', 2, 'GTY/PTY', '2021-04-10 15:31:50', NULL),
-(22, '12345678931', 'guru@sips.com', 'cd396be33701d33324a9c41af4ba7c1eb7e464e9', 'Alamsyah Firdaus', 'L', 'Tasikmalaya', '2021-07-26', NULL, '081234567894', NULL, NULL, '2022-05-16 18:43:23', 2, 'GTY/PTY', '2021-04-10 15:32:23', NULL),
+(22, '12345678931', 'guru@sips.com', 'cd396be33701d33324a9c41af4ba7c1eb7e464e9', 'Alamsyah Firdaus', 'L', 'Tasikmalaya', '2021-07-26', NULL, '081234567894', NULL, NULL, '2023-02-22 18:01:48', 2, 'GTY/PTY', '2021-04-10 15:32:23', NULL),
 (23, '9876543218', NULL, '92429d82a41e930486c6de5ebda9602d55c39986', 'Siswa2', 'P', 'Tasikmalaya', '2021-07-26', NULL, NULL, NULL, NULL, NULL, 3, NULL, '2021-04-10 15:33:36', NULL),
 (24, '9876543217', NULL, '92429d82a41e930486c6de5ebda9602d55c39986', 'Siswa3', 'L', 'Tasikmalaya', '2021-07-26', NULL, NULL, NULL, NULL, NULL, 3, NULL, '2021-04-10 15:34:20', NULL),
 (26, '1234567894', NULL, '9b3b8c54bbb7cbc18673c8d8d030a05d9fdbdaf0', 'Guru1', 'L', 'Ciamis', '2021-07-14', NULL, '081234567895', NULL, NULL, NULL, 2, 'GTY/PTY', '2021-07-28 23:11:18', NULL),
@@ -774,7 +803,7 @@ CREATE TABLE `user_access` (
   `user_access_id` int(11) NOT NULL,
   `user_type_id` int(11) NOT NULL,
   `sub_menu_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user_access`
@@ -802,7 +831,7 @@ INSERT INTO `user_access` (`user_access_id`, `user_type_id`, `sub_menu_id`) VALU
 CREATE TABLE `user_type` (
   `user_type_id` int(11) NOT NULL,
   `type_name` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user_type`
@@ -826,7 +855,7 @@ CREATE TABLE `wali_kelas` (
   `id_tahun_pelajaran` int(11) NOT NULL,
   `id_kelas` int(11) NOT NULL,
   `delete_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `wali_kelas`
@@ -838,7 +867,13 @@ INSERT INTO `wali_kelas` (`wali_kelas_id`, `id_user`, `id_tahun_pelajaran`, `id_
 (163, 20, 20, 103, NULL),
 (164, 26, 20, 104, NULL),
 (165, NULL, 20, 105, NULL),
-(171, NULL, 20, 106, NULL);
+(171, NULL, 20, 106, NULL),
+(172, 26, 46, 1, NULL),
+(173, 21, 46, 102, NULL),
+(174, 20, 46, 103, NULL),
+(175, NULL, 46, 104, NULL),
+(176, NULL, 46, 105, NULL),
+(177, NULL, 46, 106, NULL);
 
 --
 -- Indexes for dumped tables
@@ -1000,7 +1035,7 @@ ALTER TABLE `wali_kelas`
 -- AUTO_INCREMENT for table `guru_piket`
 --
 ALTER TABLE `guru_piket`
-  MODIFY `id_guru_piket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_guru_piket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `image_slider`
@@ -1012,7 +1047,7 @@ ALTER TABLE `image_slider`
 -- AUTO_INCREMENT for table `jadwal_pelajaran`
 --
 ALTER TABLE `jadwal_pelajaran`
-  MODIFY `jadwal_pelajaran_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `jadwal_pelajaran_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `jam_pelajaran`
@@ -1060,7 +1095,7 @@ ALTER TABLE `pengumuman`
 -- AUTO_INCREMENT for table `presensi`
 --
 ALTER TABLE `presensi`
-  MODIFY `presensi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=254;
+  MODIFY `presensi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=264;
 
 --
 -- AUTO_INCREMENT for table `siswa`
@@ -1078,13 +1113,13 @@ ALTER TABLE `sub_menu`
 -- AUTO_INCREMENT for table `tahun_pelajaran`
 --
 ALTER TABLE `tahun_pelajaran`
-  MODIFY `tahun_pelajaran_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `tahun_pelajaran_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `tanggal_semester`
 --
 ALTER TABLE `tanggal_semester`
-  MODIFY `id_tanggal_semester` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_tanggal_semester` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tingkat_kelas`
@@ -1114,7 +1149,7 @@ ALTER TABLE `user_type`
 -- AUTO_INCREMENT for table `wali_kelas`
 --
 ALTER TABLE `wali_kelas`
-  MODIFY `wali_kelas_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=172;
+  MODIFY `wali_kelas_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=178;
 
 --
 -- Constraints for dumped tables

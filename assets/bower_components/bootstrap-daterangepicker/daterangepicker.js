@@ -62,17 +62,17 @@
             this.drops = 'up';
 
         this.buttonClasses = 'btn btn-sm';
-        this.applyClass = 'btn-primary';
+        this.applyClass = 'btn-success';
         this.cancelClass = 'btn-default';
 
         this.locale = {
             direction: 'ltr',
             format: moment.localeData().longDateFormat('L'),
             separator: ' - ',
-            applyLabel: 'Pilih',
-            cancelLabel: 'Batal',
+            applyLabel: 'Apply',
+            cancelLabel: 'Cancel',
             weekLabel: 'W',
-            customRangeLabel: 'Rentang Tanggal',
+            customRangeLabel: 'Custom Range',
             daysOfWeek: moment.weekdaysMin(),
             monthNames: moment.monthsShort(),
             firstDay: moment.localeData().firstDayOfWeek()
@@ -120,8 +120,8 @@
                 '</div>' +
                 '<div class="ranges">' +
                     '<div class="range_inputs">' +
-                        '<button class="applyBtn" style="background-color: #0088CC; border: 1px solid #0088CC; font-weight: bold;" disabled="disabled" type="button"></button> ' +
-                        '<button class="cancelBtn" style="font-weight: bold;" type="button"></button>' +
+                        '<button class="applyBtn" disabled="disabled" type="button"></button> ' +
+                        '<button class="cancelBtn" type="button"></button>' +
                     '</div>' +
                 '</div>' +
             '</div>';

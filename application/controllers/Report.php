@@ -96,7 +96,7 @@ class Report extends CI_Controller {
 		$this->load->view('content/laporan/presensi_per_semester', $data);
 	}
 
-	private function _query_siswa($id_user = NULL, $id_kelas)
+	private function _query_siswa($id_user = NULL, $id_kelas = NULL)
 	{
 		$this->db->join('siswa s', 's.id_user = u.user_id', 'left');
 		$this->db->where('u.user_type_id', 3);
